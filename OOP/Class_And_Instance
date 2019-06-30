@@ -1,0 +1,18 @@
+#面向对象的编程，抽象出类（class,实例（instance）是创建的具体对象,Object表示继承至某个类，默认是继承object类
+class Student(object):
+    def __init__(self, name, gender):
+        self.name = name
+        self.__gender = gender
+    def get_gender(self):
+        return self.__gender
+    def set_gender(self,gender):
+        self.__gender = gender
+bart = Student('Bart', 'male')
+if bart.get_gender() != 'male':
+    print('测试失败!')
+else:
+    bart.set_gender('female')
+    if bart.get_gender() != 'female':
+        print('测试失败!')
+    else:
+        print('测试成功!')
